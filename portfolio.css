@@ -171,6 +171,26 @@ nav ul li:hover {
     aspect-ratio: 1/1;
     border-radius: 50%;
     box-shadow: 1px 1px 100px 5px #ffffff88;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: pulse 3s infinite;
+}
+
+.rightSection img:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 1px 1px 150px 10px #ffffff88;
+}
+
+/* Keyframe for pulsating effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .leftSection {
@@ -203,6 +223,8 @@ nav ul li:hover {
         margin-top: 30px;
     }
 }
+
+
 
 .brown {
     color: orange;
