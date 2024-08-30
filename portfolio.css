@@ -120,15 +120,29 @@ nav ul li:hover {
     }
 }
 
+#mobile-menu-btn {
+    display: none;
+  }
+  .mobile-menu {
+    color: white;
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 60vh;
+    width: 70vw;
+    background-color: blue;
+  }
 
-.firstSection{
+
+/* Original Styles */
+.firstSection {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 150px 0;
 }
 
-.firstSection button{
+.firstSection button {
     background-color: rgb(30, 30, 29);
     color: white;
     height: 45px;
@@ -139,25 +153,53 @@ nav ul li:hover {
     border: 3px solid white;
     font-weight: bold;
 }
-.firstSection .Resume{
+
+.firstSection .Resume {
     margin-right: 20px;
 }
-.firstSection button:hover{
+
+.firstSection button:hover {
     background-color: rgb(246, 152, 11);
 }
-.rightSection img{
-    height:350px;
+
+.rightSection img {
+    height: 350px;
     width: 350px;
     border-radius: 50%;
-    /* border: 5px solid rgb(255, 255, 255); */
-    box-shadow: 1px 1px 100px 5px #ffffff88; 
+    box-shadow: 1px 1px 100px 5px #ffffff88;
 }
-.leftSection{
+
+.leftSection {
     font-size: 2.5rem;
     margin-top: 30px;
     font-weight: bold;
     color: #ffffff;
 }
+
+/* Mobile Viewport Styles */
+@media (max-width: 768px) {
+    .firstSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rightSection img {
+        height: 200px;
+        width: 400px;
+    }
+
+    .leftSection {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .firstSection button {
+        width: 140px;
+        height: 40px;
+        margin-top: 30px;
+    }
+}
+
 .brown{
     color: orange;
 }
@@ -193,6 +235,8 @@ nav ul li:hover {
     .leftSection div {
         font-size: 1.5rem;
     }
+
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -212,6 +256,19 @@ nav ul li:hover {
     .rightSection img {
         width: 70%;
     }
+
+    #mobile-menu-btn {
+        display: block;
+      }
+      nav p {
+        display: none;
+      }
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
 }
 
 #element{
@@ -391,75 +448,68 @@ color: #aaa;
     }
 }
 
-
-.Experiences{
+/* Original Styles */
+.Experiences {
     width: 98vw;
     text-align: center;
     margin-top: 80px;
 }
 
-.Experiences .ExpSection .Exp1{
+.Experiences .ExpSection .Exp1, .Experiences .ExpSection .Exp2 {
     text-align: left;
     width: 45vw;
-    margin: 0 30% 0 30%;
-    margin-top: 50px;
+    margin: 0 auto;
+    margin-bottom: 50px;
     display: flex;
     border: 4px solid #e89c5d;
     padding: 10px;
     border-radius: 20px;
     color: #ffffff;
+    transition: box-shadow 0.3s ease;
 }
-.Experiences .ExpSection .Exp1:hover{
+
+.Experiences .ExpSection .Exp1:hover, .Experiences .ExpSection .Exp2:hover {
     box-shadow: 1px 1px 70px 5px #ffffff88; 
 }
 
-
-.Experiences .ExpSection .Exp1 a{
+.Experiences .ExpSection .Exp1 a, .Experiences .ExpSection .Exp2 a {
     text-decoration: none;
     color: #e89c5d;
     margin-right: 50px;
-    
 }
 
-.Experiences .ExpSection .Exp2 a{
-    text-decoration: none;
-    color: #e89c5d;
-    margin-right: 50px;
-    
-}
-
-.Experiences .ExpSection .Exp1 img{
+.Experiences .ExpSection .Exp1 img, .Experiences .ExpSection .Exp2 img {
     height: 50px;
     width: 50px;
-    margin-top: 20%;
+    margin-top: 5%;
     margin-right: 40px;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
 }
 
-.Experiences .ExpSection .Exp2{
-    text-align: left;
-    width: 45vw;
-    margin: 0 30% 0 30%;
-    margin-top: 50px;
-    display: flex;
-    border: 4px solid #e89c5d;
-    padding: 10px;
-    border-radius: 20px;
-    color: #ffffff;
-    margin-bottom: 30px;
-}
-.Experiences .ExpSection .Exp2:hover{
-    box-shadow: 1px 1px 70px 5px #ffffff88; 
+/* Mobile Viewport Styles */
+@media (max-width: 768px) {
+    .Experiences .ExpSection .Exp1, .Experiences .ExpSection .Exp2 {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .Experiences .ExpSection .Exp1 img, .Experiences .ExpSection .Exp2 img {
+        margin: 0 0 20px 0;
+    }
+
+    .Experiences .ExpSection .Exp1, .Experiences .ExpSection .Exp2 {
+        margin: 20px auto;
+    }
+
+    .Experiences .ExpSection .Exp1 a, .Experiences .ExpSection .Exp2 a {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
 }
 
 
-.Experiences .ExpSection .Exp2 img{
-    height: 50px;
-    width: 50px;
-    margin-top: 20%;
-    margin-right: 40px;
-    margin-bottom: 20%;
-}
 .pro {
     padding: 40px 20px;
     background-color: #000; /* Matches the dark theme */

@@ -14,9 +14,22 @@ function myFunction() {
     }
 }
 
-const hamburger = document.getElementById('hamburger');
+const hamburger = document.getElementsByClassName('icon');
 const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+});
+
+var mobileMenuBtn = document.querySelector("#mobile-menu-btn");
+var mobileMenu = document.querySelector(".mobile-menu");
+mobileMenuBtn.addEventListener("click", () => {
+  if (mobileMenu.style.display === "none") {
+    mobileMenu.style.display = "flex";
+    mobileMenuBtn.innerHTML = "Close";
+  } 
+  else {
+    mobileMenu.style.display = "none";
+    mobileMenuBtn.innerHTML = "Menu";
+  }
 });
